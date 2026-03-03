@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="lg:hidden glass-strong border-t border-white/10 px-4 pb-4">
+        <nav className="lg:hidden glass-strong border-t border-border px-4 pb-4">
           {navLinks.map((l) => (
             <Link
               key={l.path}
