@@ -71,7 +71,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="border-white/20 text-foreground hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted">
                 View Our Services
               </Button>
             </Link>
@@ -80,7 +80,7 @@ const Index = () => {
       </section>
 
       {/* Stats */}
-      <section className="section-padding border-t border-white/5">
+      <section className="section-padding border-t border-border">
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <GlassCard key={i} hover={false} className="text-center">
@@ -155,7 +155,7 @@ const Index = () => {
                 </Button>
               </Link>
               <a href="https://wa.me/254111679286" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-white/20 text-foreground hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted">
                   Chat on WhatsApp
                 </Button>
               </a>
