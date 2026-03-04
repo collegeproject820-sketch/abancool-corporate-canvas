@@ -34,9 +34,9 @@ const serviceGroups = [
   },
   {
     icon: Settings,
-    title: "System Integration",
-    desc: "Connect and unify your business tools.",
-    items: ["API Integration", "Payment Gateway Integration", "SMS Integration", "ERP Integration", "Government Systems Integration"],
+    title: "Integrations",
+    desc: "Seamlessly connect third-party services to your systems.",
+    items: ["M-Pesa / Daraja API", "SMS Gateway (Africa's Talking, Twilio)", "Payment Gateways (Stripe, PayPal, Pesapal)", "Google Maps & Location APIs", "Social Media APIs (Facebook, Instagram, Twitter)", "Email Services (SendGrid, Mailgun)", "ERP & CRM Integration", "Government Systems (eCitizen, KRA iTax)", "Accounting Software (QuickBooks, Xero)", "Cloud Storage (AWS S3, Google Cloud)"],
   },
   {
     icon: Cloud,
