@@ -21,7 +21,7 @@ const services = [
   { icon: Code, title: "Software Development", desc: "Custom enterprise systems and automation tools" },
   { icon: Smartphone, title: "Mobile Apps", desc: "Android, iOS, and hybrid mobile applications" },
   { icon: Server, title: "System Development", desc: "Hospital, School, Rental and Financial systems" },
-  { icon: Settings, title: "System Integration", desc: "API, Payment, SMS, and ERP integrations" },
+  { icon: Settings, title: "Integrations", desc: "M-Pesa, SMS, Payment gateways, APIs & more" },
   { icon: Cloud, title: "Web Hosting", desc: "Shared, VPS, Dedicated hosting and domains" },
   { icon: Plane, title: "Booking & Flights", desc: "Flight booking, hotel reservations, and travel platforms" },
   { icon: MessageSquare, title: "Bulk SMS", desc: "Mass messaging, SMS API, and campaign management" },
@@ -156,7 +156,7 @@ const Index = () => {
                   Get Started Today
                 </Button>
               </Link>
-              <a href="https://wa.me/254111679286" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/254728825152" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted">
                   Chat on WhatsApp
                 </Button>
