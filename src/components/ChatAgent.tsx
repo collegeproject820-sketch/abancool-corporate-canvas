@@ -1,16 +1,28 @@
 import { useState, useRef, useEffect } from "react";
-import { Bot, X, Send, Loader2 } from "lucide-react";
+import { Bot, X, Send, Loader2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
+const WA_NUMBER = "254728825152";
+
+const buildWhatsAppLink = (messages: Msg[]) => {
+  const convo = messages
+    .filter((m) => m.role === "user")
+    .map((m) => m.content)
+    .join("\n- ");
+  const text = convo
+    ? `Hi Abancool, I was chatting with your AI assistant and need help with:\n- ${convo}`
+    : "Hi Abancool, I'd like to chat with your team.";
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+};
 
 const ChatAgent = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hi! 👋 I'm Abancool's AI assistant. How can I help you today?" },
+    { role: "assistant", content: "Hi! 👋 I'm Abancool's AI assistant. How can I help you today? For live support, you can also chat with our team directly on WhatsApp!" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -82,7 +94,7 @@ const ChatAgent = () => {
       }
     } catch (e) {
       console.error(e);
-      setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong. Please try again." }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong. Please try again or chat with us directly on WhatsApp!" }]);
     } finally {
       setLoading(false);
     }
@@ -90,7 +102,6 @@ const ChatAgent = () => {
 
   return (
     <>
-      {/* Toggle */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -101,9 +112,8 @@ const ChatAgent = () => {
         </button>
       )}
 
-      {/* Chat window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[360px] h-[500px] rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden bg-background">
+        <div className="fixed bottom-6 right-6 z-50 w-[360px] h-[520px] rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden bg-background">
           {/* Header */}
           <div className="gradient-blue px-4 py-3 flex items-center justify-between text-primary-foreground">
             <div className="flex items-center gap-2">
@@ -144,6 +154,17 @@ const ChatAgent = () => {
               </div>
             )}
           </div>
+
+          {/* WhatsApp handoff banner */}
+          <a
+            href={buildWhatsAppLink(messages)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-3 mb-2 flex items-center gap-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 px-3 py-2 text-xs text-emerald-400 hover:bg-emerald-500/20 transition-colors"
+          >
+            <MessageCircle className="w-4 h-4 flex-shrink-0" />
+            <span>Continue on WhatsApp for live support with our team →</span>
+          </a>
 
           {/* Input */}
           <div className="border-t border-border p-3 flex gap-2">
