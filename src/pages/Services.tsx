@@ -4,8 +4,7 @@ import GlassCard from "@/components/GlassCard";
 import { Button } from "@/components/ui/button";
 import {
   Globe, Code, Smartphone, Building2, Settings, Cloud,
-  ShoppingCart, Briefcase, Layout, Wrench, CreditCard,
-  MessageSquare, Link2, Server as ServerIcon,
+  ShoppingCart, MessageSquare, Plane,
 } from "lucide-react";
 
 const serviceGroups = [
@@ -44,6 +43,18 @@ const serviceGroups = [
     title: "Web Hosting Services",
     desc: "Reliable hosting to keep you online.",
     items: ["Shared Hosting", "VPS Hosting", "Dedicated Hosting", "Domain Registration", "Email Hosting"],
+  },
+  {
+    icon: ShoppingCart,
+    title: "Booking & Flight Systems",
+    desc: "End-to-end travel and reservation platforms.",
+    items: ["Flight Booking Systems", "Hotel Reservation Systems", "Event Booking Platforms", "Appointment Scheduling", "Tour & Travel Management"],
+  },
+  {
+    icon: MessageSquare,
+    title: "Bulk SMS Services",
+    desc: "Reach thousands instantly with our SMS solutions.",
+    items: ["Bulk SMS Gateway", "SMS API Integration", "Promotional Campaigns", "Transactional SMS", "SMS Reporting & Analytics"],
   },
 ];
 

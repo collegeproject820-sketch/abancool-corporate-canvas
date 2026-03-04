@@ -6,7 +6,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import {
   Globe, Code, Smartphone, Server, Settings, Cloud,
   Building2, GraduationCap, Home, Wallet, BarChart3,
-  CheckCircle2, Users, Zap, Shield,
+  CheckCircle2, Users, Zap, Shield, Plane, MessageSquare,
 } from "lucide-react";
 
 const stats = [
@@ -23,6 +23,8 @@ const services = [
   { icon: Server, title: "System Development", desc: "Hospital, School, Rental and Financial systems" },
   { icon: Settings, title: "System Integration", desc: "API, Payment, SMS, and ERP integrations" },
   { icon: Cloud, title: "Web Hosting", desc: "Shared, VPS, Dedicated hosting and domains" },
+  { icon: Plane, title: "Booking & Flights", desc: "Flight booking, hotel reservations, and travel platforms" },
+  { icon: MessageSquare, title: "Bulk SMS", desc: "Mass messaging, SMS API, and campaign management" },
 ];
 
 const industries = [
